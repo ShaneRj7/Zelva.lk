@@ -1,0 +1,685 @@
+/*Google  Fonts */
+
+@import url();
+
+/*Css code for the whole html*/
+*{
+    margin: 0;/*space around the elements, outside the defined borders*/
+    padding: 0;/*space around the element, inside the defined borders */
+    box-sizing: border-box;/*padding and border of the html page*/
+    line-height: normal;/*height of a line*/
+    font-weight: normal;/*how thick or thin the character should be*/
+}
+
+header{
+    height: 50vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('./Bentota/bentota\ background.jpg');/*makes the background image darker/lighter*/
+    background-position: auto;
+    background-size: cover;
+    display: flex;/* sets a flexiable length on flexiable items*/
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    position: absolute;/*This will let you place an item any where you wants using top bottom left right */
+    top: 0%;
+    left: 28%;
+    list-style-type: none;
+    margin-top: 42px;
+}
+ 
+ul li{
+     display: inline-block;
+}
+ 
+ul li a{
+     text-decoration: none;
+     color: white;
+     padding: 5px 20px;
+     border: 1px solid transparent;
+     transition: 0.6s ease;/*makes the transition effect according to the given time duration*/
+     border-radius: 25px;
+}
+ 
+ul li a:hover{
+     background-color: white;
+     color: black;
+}
+ 
+ul li.active a{
+     background-color: #fff;
+     color: black;
+}
+
+.logo{
+    width: 22%;
+    height: 115px;
+    position: absolute;
+    left: 13%;
+    top: 8%;
+    transform: translate(-50%, -50%);/* position according to  X and Y cordinates */
+    background-image: url('./logo\ .png');
+    background-size: 100% 100%; 
+}
+
+.logotitle{
+    color: white;
+    font-size: 80px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.title{
+    position: absolute;
+    top: 43%;
+    left: 16%;
+    transform: translate(-50%,-50%);
+}
+
+.title h1{
+    font-size: 85px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;/*width and the color of strokes for text characters*/
+    background: url("./effect.png");/*image for the animmation*/
+    -webkit-background-clip: text;/*puts the clip into the text*/
+    background-position: 0 0;
+    animation: back 20s linear infinite;}/*animation is forever*/
+
+@keyframes back{
+    100%{background-position: 2000px 0;}/*animation effect*/
+}
+
+.subsec-1{
+    text-align: left;
+    margin-top: 10px;
+}
+
+.subsec-1 h1{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}
+
+.line{
+    background-color: red;
+    width: 300px;
+    height: 5px;
+    border-radius: 10px;
+    margin-left: 570px;
+    margin-top: 0px;
+}
+
+.subsec-1 p{
+    margin: 15px;
+    margin-top: 50px;
+    width: 45%;
+    display: flex;
+    background: linear-gradient(135deg,#F06966,#FAD6A6);
+    padding: 20px;
+    border-radius: 10px;
+
+} 
+
+.subsec-1 img{
+    width: 700px;
+    height: 400px;
+    margin-top: -300px;
+    margin-left: 700px;
+    border-radius:10px;
+}
+
+.subsec-2 h1{
+    font-size: 45px;
+    padding-left: 10px;
+    padding-top: 7px;
+    margin-top: 25px;
+}
+
+.subsec-2 p{
+    text-align: left;
+    width: 45%;
+    margin-left: 53%;
+    margin-top: 2%;
+    background: linear-gradient(135deg,#F06966,#FAD6A6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.subsec-2 img{
+    width: 700px;
+    height: 350px;
+    margin-left: 30px;
+    margin-top: -300px;
+    border-radius: 10px;
+}
+
+.subsec-3{
+    align-items: right;
+}
+
+.subsec-3 h1{
+    font-size: 45px;
+    padding-left: 50px;
+    padding-top: 7px;
+    margin-top: 50px;
+    margin-left: 600px;
+}
+
+.subsec-3 p{
+    text-align: left;
+    width: 45%;
+    margin-left: 1%;
+    margin-top: 2%; 
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(135deg,#F06966,#FAD6A6);
+   
+}
+
+
+.subsec-3 img{
+    width: 700px;
+    height: 350px;
+    margin-left: 48%;
+    margin-top: -300px;
+    border-radius: 10px;
+}
+
+.Gotop{
+    padding-top: 5%;
+    padding-left: 5px;
+}
+
+.Gotop a{
+    background: linear-gradient(135deg,blue,red);
+    width: 80px;
+    height: 80px;
+    border: 0px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+
+footer{
+    position: absolute;
+    bottom: -195%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right,#00093c,#2d0b00);
+    color: #fff;
+    height: 41%;
+    width: 100vw;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    font-family: "Open Sans";
+    
+}
+
+.row{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;/*items are forced into one line*/
+    align-items: flex-start;/*aligns items from the start of the container (left)*/
+    justify-content: space-between;/*space between content*/
+    padding-top: 50px;}
+
+.col{
+    flex-basis: 25%; /* starting size of the item is 25% */
+    padding: 10px;
+   
+}
+
+.footer-logo{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 25%;
+    margin-bottom: 0px;
+}
+
+.col h3{
+    width:fit-content;
+    margin-bottom: 40px;
+    position: relative;/*changes the position of the element to the parent element*/
+}
+
+.email{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.col ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.col ul li a{
+    text-decoration: none;
+}
+
+.footer-info{
+    position: absolute;
+    top: 30%;
+    left: 31%;
+    text-align: center;
+}
+
+.icons{
+    padding-top: 50px;
+}
+
+.icons img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background-color: #fff;
+    margin-right: 15px ;
+    cursor: pointer;
+}
+
+
+hr{
+    width: 1300px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+    position: absolute;
+    left: 4.5%;
+    top: 80%;
+}
+
+.footer-bottominfo{
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    top: 83%;
+}
+
+.footer-bottominfo p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottominfo span{
+    text-transform: uppercase;
+    opacity: .4;/*makes it dull*/
+    font-weight: 200 ;
+}
+
+/****************************************************************/
+
+                /* RESPONSIVENESS - IPHONE SE */ 
+
+/****************************************************************/
+
+@media screen and (max-width:411px) and (min-width:374px)
+{   
+    .logo{
+        width: 4rem;
+        height: 4rem;
+    }
+    ul li
+    {
+        margin-bottom: 20px;
+    }
+
+    #mainheading
+    {
+        font-size: 40px;
+        margin-left: 100px;
+    }
+
+    .subsec-1 p{
+        width: 350px;
+    }
+
+    .line{
+        margin-left: 110px;
+        width: 150px;
+    }
+
+    .subsec-1 img{
+        width: 350px;
+        height: 300px;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+
+    .subsec-2 h1{
+        font-size: 25px;
+        width: 300px;
+    }
+
+    .subsec-2 p{
+        width: 350px;
+        margin-left: 10px;
+    }
+
+    .subsec-2 img{
+        width: 350px;
+        height: 300px;
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+
+    .subsec-3 h1{
+        font-size: 25px;
+        width: 300px;
+        margin-left: 74px;
+    }
+
+    .subsec-3 p{
+        width: 350px;
+        margin-left: 10px;
+    }
+
+    .subsec-3 img{
+        width: 350px;
+        height: 300px;
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+
+    .Gotop{
+        margin-top: 50px;
+    }
+
+    footer{
+        top: 3550px;
+        display: inline;
+    }
+
+    footer .col img{
+        width: 70px;
+    }
+
+    footer .col .footer-info{
+        font-size: 10px;
+        padding-right: 140px;
+        top: 10px;
+    }
+
+    footer .icons img{
+        width: 40px;
+        height: 25px;
+    }
+
+    footer hr{
+        width: 375px;
+    }
+
+    footer .icons{
+        margin-top: -70px;
+    }
+
+    footer .footer-bottominfo p{
+        font-size: 10px;
+    }
+
+   footer hr{
+        width: 343px;
+    }
+}
+
+
+/****************************************************************/
+
+        /* RESPONSIVENESS - Samsung Galaxy S20 Ultra */ 
+
+/****************************************************************/
+
+@media screen and (max-width:818px) and (min-width:411px)
+{   
+
+    /*HOME*/
+
+    .logo{
+        width: 4rem;
+        height: 4rem;
+    }
+    ul li
+    {
+        margin-bottom: 20px;
+        
+    }
+    
+    #mainheading
+    {
+        font-size: 50px;
+        margin-left: 150px;
+
+    }
+
+    .subsec-1 .line{
+        margin-left: 130px;
+        width: 150px;
+    }
+
+    .subsec-1 p{
+        margin-left: 20px;
+        width: 370px;
+    }
+
+    .subsec-1 img{
+        width: 380px;
+        height: 250px;
+    }
+
+    .subsec-2 h1{
+        font-size: 2rem ;
+        width: 400px;
+        height: 90px;
+    }
+
+    .subsec-2 img{
+        width: 380px;
+        height: 250px;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+
+    .subsec-2 p{
+        margin-left: 20px;
+        width: 370px;
+    }
+
+    .subsec-3 h1{
+        font-size: 2rem ;
+        width: 400px;
+        height: 90px;
+        margin-left: 12px;
+    }
+
+    .subsec-3 img{
+        width: 380px;
+        height: 250px;
+        margin-left: 15px;
+        margin-top: 30px;
+    }
+
+    .subsec-3 p{
+        margin-left: 20px;
+        width: 370px;
+    }
+
+    
+    footer{
+        top: 3200px;
+        display: inline;
+    }
+
+    footer .col img{
+        width: 100px;
+    }
+
+    footer .col .footer-info{
+        font-size: 10px;
+        padding-right: 140px;
+        top: 130px;
+    }
+
+    footer .icons img{
+        width: 40px;
+        height: 25px;
+        
+    }
+
+    footer .icons{
+        margin-top: 40px;
+    }
+
+    footer .footer-bottominfo p{
+        font-size: 10px;
+    }
+
+}
+
+/****************************************************************/
+
+                /* RESPONSIVENESS - IPAD AIR */ 
+
+/****************************************************************/
+
+@media screen and (max-width:1279px) and (min-width:819px)
+{   
+
+    /*HOME*/
+
+    .logo{
+        width: 10rem;
+        height: 5rem;
+    }
+    ul li
+    {
+        margin-bottom: 20px;
+        font-size: 20px;
+        
+    }
+    
+    #mainheading
+    {
+        font-size: 60px;
+        margin-left: 150px;
+
+    }
+
+    .subsec-1 .line{
+        margin-left: 230px;
+        width: 350px;
+    }
+
+    .subsec-1 img{
+        width: 600px;
+        height: 300px;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    .subsec-1 p{
+        font-size: 1.4rem;
+        width: 760px;
+        height: 420px;
+        margin-left: 30px;
+    }
+
+    .subsec-2 h1{
+        font-size: 2.5rem;
+        margin-left: 10px;
+        width: 900px;
+        margin-top: 40px;
+    }
+
+    .subsec-2 p{
+        font-size: 1.4rem;
+        width: 760px;
+        height: 420px;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+
+
+    .subsec-2 img{
+        width: 600px;
+        height: 300px;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    .subsec-3 h1{
+        font-size: 2.5rem ;
+        width: 800px;
+        height: 70px;
+        margin-left: 70px;
+
+    }
+
+    .subsec-3 img{
+        width: 600px;
+        height: 300px;
+        margin-left: 100px;
+        margin-top: 30px;
+    }
+
+    .subsec-3 p{
+        font-size: 1.4rem;
+        width: 760px;
+        height: 420px;
+        margin-top: -10px;
+        margin-left: 30px;
+    }
+
+    
+    footer{
+        top: 3420px;
+        display: inline;
+    }
+
+    footer .col img{
+        width: 200px;
+    }
+
+    footer .col .footer-info{
+        font-size: 15px;
+        padding-right: 140px;
+        top: 110px;
+    }
+
+    footer .icons img{
+        width: 60px;
+        height: 40px;
+        
+    }
+
+    footer .icons{
+        margin-top: 0px;
+        margin-left: 100px;
+    }
+
+    footer .footer-bottominfo p{
+        font-size: 20px;
+    }
+
+
+    hr{
+        width: 750px;
+    }
+
+}
+
+
+
+
