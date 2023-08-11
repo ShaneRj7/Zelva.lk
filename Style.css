@@ -292,7 +292,8 @@ ul li.active a{
     /* SLIDER 3 */
 
 .container2{
-        padding: 2rem;}
+        padding: 2rem;
+    }
     
 .slider-wrapper2{
         position: absolute;
@@ -1265,16 +1266,36 @@ tbody  tr td img{
     left: 0.5%;
 }
 
+.book-now{
+    position: absolute;
+    top: 248%;
+    right: 45%;
+}
+
+#booknow{
+    background: linear-gradient(135deg,blue,#03ffd1);
+    font-weight: 530;
+    color: white;
+    font-size: large;
+    width: 203px;
+    height: 45px;
+    border: 0px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    list-style: none;
+    text-decoration: none;
+}
+
 .hr4{
     position: absolute;
     left: 4.5%;
-    top: 245%;
+    top: 255%;
 }
 
 .Hatchery-Images2{
     width: 90%;
     position: absolute;
-    top: 254%;
+    top: 262%;
     left: 5%;
     display: flex;
     flex-direction: row;
@@ -1299,25 +1320,9 @@ tbody  tr td img{
     z-index: 2;
 }
 
-/* FOOTER */
-
-.footer-3{
-    position: absolute;
-    bottom: -242%;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to right,#00093c,#2d0b00);
-    color: #fff;
-    height: 41%;
-    width: 100vw;
-    border-top-left-radius: 75px;
-    border-top-right-radius: 75px;
-    font-family: "Open Sans";
-    
-}
 
 .Gotop-3{
-    padding-top: 109%;
+    padding-top: 115%;
     padding-left: 5px;
 }
 
@@ -1334,6 +1339,22 @@ tbody  tr td img{
 }
 
 
+/* FOOTER */
+
+.footer-3{
+    position: absolute;
+    bottom: -252%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right,#00093c,#2d0b00);
+    color: #fff;
+    height: 41%;
+    width: 100vw;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    font-family: "Open Sans";
+    
+}
 
 
 

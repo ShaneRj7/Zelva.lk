@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Website Name-->
+    <title>Žᴇʟᴠᴀ.lk</title>
+<!--Website Icon-->
+    <link rel="icon" href="./logoturtle.png" type="image/x-icon">
+<!--Style Sheet CSS Link-->
+    <link rel="stylesheet" href="./Ticket.css" type="text/css">
+</head>
+
+<body>
+
+<!--Navigation Bar-->
+<nav>
+    <ul>
+        <li><a href="./Hikkaduwa Turtle Hatchery.html" target="_blank">Hikkaduwa Turtle Hatchery</a></li>
+    </ul>
+</nav>
+
+<div class="nav1">
+<ul>
+    <li class="active"><a href="./Tickets.html">Book Tickets</a></li>
+    <li><a>Details</a></li>
+    <li><a>Payment</a></li>
+    <li><a>Confirmation</a></li>
+</ul>
+</div>
+
+
+<!--HEADER-->
+<header class="header">
+<!--Website logo-->
+    <div class="logo1"></div>
+    <!--Main Heading-->
+    <div class="title-3">
+        <h1 id="mainheading">BUY TICKETS</h1>
+    </div>
+</header>
+<div class="ticket-container">
+    <div>
+        <div class="date-heading">
+            <h1>Dates</h1>
+        </div>
+        <div class="container">
+            <div class="calendar">
+                <div class="calendar-header">
+                    <span class="month-picker" id="month-picker">May</span>
+                    <div class="year-picker" id="year-picker">
+                        <span class="year-change" id="pre-year">
+                            <pre><</pre>
+                        </span>
+                        <span id="year">2020</span>
+                        <span class="year-change" id="next-year">
+                        <pre>></pre>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="calendar-body">
+                    <div class="calendar-week-days">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class="calendar-days">
+                    </div>
+                </div>
+                <div class="calendar-footer">
+                </div>
+                <div class="month-list" ></div>
+            </div>
+        </div>
+    </div>
+
+        <table class="sum-table" id="sum-table">
+            <tr>
+                <td>Date</td>
+                <td id="selecteddate">< Current Date ></td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td id="selecttime">07:00am to 08:00am</td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td id="selectedduration">1hrs ( 01 Normal : 00 Peak)</td>
+            </tr>
+            <tr>
+                <th>Tickets</th>
+                <th>Charges</th>
+            </tr>
+            <tr>
+                <td>1 <span>Foreigner Adult</span></td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <th>Total Payable</th>
+                <th id="totalpayableamount">$10</th>
+            </tr> 
+        
+        </table>
+        
+</div>
+
+<div class="ticket-container1">
+   <div>
+        <div class="guest-heading">
+            <h1>Guests</h1>
+        </div>
+        <div class="container2">
+        <div class="box">
+            <label for="name">SL Adult</label>
+            <div class="dec button">-</div>
+            <input type="text" name="qty" id="1" value="0" class="input-filed">
+            <div class="inc button">+</div>
+        </div>
+        <div class="box">
+            <label for="name">SL Child</label>
+            <div class="dec button">-</div>
+            <input type="text" name="qty" id="2" value="0" class="input-filed">
+            <div class="inc button">+</div>
+        </div>
+        <div class="box">
+            <label for="name">Foreigner Adult</label>
+            <div class="dec button">-</div>
+            <input type="text" name="qty" id="3" value="1" class="input-filed">
+            <div class="inc button">+</div>
+        </div>
+        <div class="box">
+            <label for="name">Foreigner Child</label>
+            <div class="dec button">-</div>
+            <input type="text" name="qty" id="4" value="0" class="input-filed">
+            <div class="inc button">+</div>
+        </div>
+        <div class="box">
+            <label for="name">Infant</label>
+            <div class="dec button">-</div>
+            <input type="text" name="qty" id="5" value="0" class="input-filed">
+            <div class="inc button">+</div>
+        </div>
+        </div>
+    </div>
+
+    <div>
+
+        <table class="info-table" >
+            <thead>
+            <tr>
+                <th>Category</th>
+                <th>Charge</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>One Normal Hour For Foreigner Adult</td>
+                <td>10 USD</td>
+            </tr>
+            <tr>
+                <td>One Peak Hour For Foreigner Adult</td>
+                <td>13 USD</td>
+            </tr>
+            <tr>
+                <td>One Normal Hour For Foreigner Child</td>
+                <td>5 USD</td>
+            </tr>
+            <tr>
+                <td>One Peak Hour For Foreigner Child</td>
+                <td>8 USD</td>
+            </tr>
+            <tr>
+                <td>One Normal Hour For SL Adult</td>
+                <td>4 USD</td>
+            </tr>
+            <tr>
+                <td>One Peak Hour For SL Adult</td>
+                <td>6 USD</td>
+            </tr>
+            <tr>
+                <td>One Normal Hour For SL Child</td>
+                <td>2 USD</td>
+            </tr>
+            <tr>
+                <td>One Peak Hour For SL Child</td>
+                <td>3 USD</td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+<div class="duration-heading">
+    <h1>Duration</h1>
+</div>
+
+<div class="time">
+<select name="duration" id="duration" multiple >
+    <option value="1">07:00am - 08:00am</option>
+    <option value="2">08:00am - 09:00am</option>
+    <option value="3">09:00am - 10:00am</option>
+    <option value="4">10:00am - 11:00am (Peak)</option>
+    <option value="5">11:00am - 12:00pm (Peak)</option>
+    <option value="6">12:00pm - 1:00pm (Peak)</option>
+    <option value="7">1:00pm - 2:00pm</option>
+    <option value="8">2:00pm - 3:00pm</option>
+    <option value="9">3:00pm - 4:00pm (Peak)</option>
+    <option value="10">4:00pm - 5:00pm (Peak)</option>
+    <option value="11">5:00pm - 6:00pm (Peak)</option>
+</select>
+</div>
+
+<div class="purchase-now">
+    <a href="./Details.html" target="_blank"><button id="purchasenow" name="purchasenow">Continue with purchase</button></a>
+</div>
+
+<!--FOOTER-->
+<footer class="footer-3">
+    <div class="row">
+        <div class="col">
+        <!--Website logo-->
+            <img src="./logo .png" class="footer-logo">
+        </div>
+        <div class="col">
+            <!--introduction about Zelva-->
+            <div class="footer-info">
+                <p>We're Zelva, <br> here to give you the most updated information <br> about the turtle hatcheries in the Paradise Isle.  Furthermore, <br> we hope that this website would help you understand the different turtles <br> and visit the best turtle hatcheries in Sri Lanka. Hope you have a <br> great time in Sri Lanka. A donation or a purchase would always help us <br> improve the sustainance of turtles in <br> Sri Lanka. </p>
+            </div>
+            <!--Appplication icons-->
+            <div class="icons">
+                <img src="./Footer icons/facebook-icon.png">
+                <img src="./Footer icons/Pintrest-icon.png">
+                <img src="./Footer icons/Whatsapp-icon.png">
+                <img src="./Footer icons/instagram-icon.png">
+                <img src="./Footer icons/Twitter-icon.png">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!--Desinger name-->
+    <div class="footer-bottominfo">
+        <p>copyrights &copy;2023 codeOpacity. designed by <span>Shane Rajayogeshwaran</span></p>
+    </div>
+    
+</footer>
+
+<script src="./Ticket.js"></script>
+
+</body>
+</html>
