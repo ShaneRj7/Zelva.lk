@@ -85,25 +85,31 @@ const generateCalendar = (month, year) => {
             let selectedDate = i - first_day.getDay() + 1; // The selected date
             day.innerHTML = selectedDate;
             day.addEventListener('click', () => {
-                // Handle the click event on a specific date
-                // Store the selected date in the local storage
-                const selectedDateString = `${year}-${month + 1}-${selectedDate}`;
-                localStorage.setItem('selectedDate', selectedDateString);
-                console.log(prevSelectedDay);
-
-                // Remove the 'current-date' class from the previously selected day
-                if (prevSelectedDay) {
-                    prevSelectedDay.classList.remove('current-date');
+                // Get the current date and time
+                const currentDate = new Date();
+            
+                // Create a date object for the selected date
+                const selectedDateObj = new Date(year, month, selectedDate);
+            
+                // Check if the selected date is not in the past
+                if (selectedDateObj >= currentDate) {
+                    const selectedDateString = `${year}-${month + 1}-${selectedDate}`;
+                    localStorage.setItem('selectedDate', selectedDateString);
+                    
+                    if (prevSelectedDay) {
+                        prevSelectedDay.classList.remove('current-date');
+                    }
+                    day.classList.add('current-date');
+                    prevSelectedDay = day;
+                    
+                    const selecteddate = document.getElementById('selecteddate');
+                    selecteddate.innerText = localStorage.getItem('selectedDate');
+                } else {
+                    // Optionally, you can show an alert or provide visual feedback that the date is in the past
+                    console.log('Cannot select past dates.');
                 }
-
-                // Add the 'current-date' class to the newly selected day
-                day.classList.add('current-date');
-                prevSelectedDay = day; // Update the previously selected day
-
-                // Update the displayed selected date
-                const selecteddate = document.getElementById('selecteddate');
-                selecteddate.innerText = localStorage.getItem('selectedDate');
             });
+            
 
             if (
                 i - first_day.getDay() + 1 === currentDate.getDate() &&
