@@ -177,7 +177,7 @@ const currentDateFormate = new Intl.DateTimeFormat(
     showCurrentDateOption
 ).format(currshowDate);
 
-// todayShowDate.textContent = currentDateFormate;
+
 setInterval(() => {
     const timer = new Date();
     const option = {
@@ -185,15 +185,7 @@ setInterval(() => {
         minute: 'numeric',
         second: 'numeric',
     };
-    // const formateTimer = new Int1.DateTimeFormat('en-us', option).format(timer);
-    // let time = `${`${timer.getHours()}`.padStart(
-    //     2,
-    //     '0'
-    // )}:${`${timer.getMinutes()}`.padStart(
-    //     2,
-    //     '0'
-    // )}:${`${timer.getSeconds()}`.padStart(2, '0')}`;
-    // todayShowTime.textContent = formateTimer;
+    
 }, 1000); 
 
 localStorage.setItem('date',currentDateFormate)
@@ -319,8 +311,7 @@ function checkAndUpdateRowContent(labelText, newValue) {
       {
         // If a row exists, update the charge
         calculateCharge(labelText, newValue);
-        // const sl_child_charge =(((normal_h_count*2)+(peak_h_count*3))*newValue);
-        // localStorage.setItem('sl_child_charge' , sl_child_charge);
+        
         const charge = calculateCharge(labelText, newValue);
         const updatedcategoryName =  newValue + ` <span>${labelText}</span>`;
         foundRow.cells[1].innerText = charge;
@@ -334,8 +325,7 @@ function checkAndUpdateRowContent(labelText, newValue) {
         const chargeCell = newRow.insertCell(1);
         
         categoryCell.innerHTML = newValue + ` <span>${labelText}</span>` ;
-        // const sl_child_charge =(((normal_h_count*2)+(peak_h_count*3))*newValue);
-        // localStorage.setItem('sl_child_charge' , sl_child_charge);
+        
         const charge = calculateCharge(labelText, newValue);
         chargeCell.innerText = charge;
     }

@@ -15,60 +15,60 @@ document.addEventListener("DOMContentLoaded" , ()=>{
 const purchasenow = document.getElementById("purchasenow");
 
 cardnumber.addEventListener("input", () => {
-    validateCardNumber();
-    validateForm();
+    validatecardnumber();
+    validateform();
 });
 
 expirydate.addEventListener("input", () => {
-    validateExpiryDate();
-    validateForm();
+    validateexpirydate();
+    validateform();
 });
 
 CVV.addEventListener("input", () => {
     validateCVV();
-    validateForm();
+    validateform();
 });
 
 nameoncard.addEventListener("input", () => {
-    validateCardName();
-    validateForm();
+    validatenameoncard();
+    validateform();
 });
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.invalid');
+const Invalid = (element, message) => {
+    const entry = element.parentElement;
+    const displayinvalid = entry.querySelector('.invalid');
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('invalid');
-    inputControl.classList.remove('success');
+    displayinvalid.innerText = message;
+    entry.classList.add('invalid');
+    entry.classList.remove('success');
 }
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.invalid');
+const pass = element => {
+    const entry= element.parentElement;
+    const displayinvalid = entry.querySelector('.invalid');
 
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('invalid');
+    displayinvalid.innerText = '';
+    entry.classList.add('success');
+    entry.classList.remove('invalid');
 };
 
-const validateCardNumber = () => {
+const validatecardnumber = () => {
     const value = cardnumber.value.trim();
     const cardNumRegex = /^[0-9]+$/;
 
 
     if (value === '') {
-        setError(cardnumber, 'Card Number is required');
+        Invalid(cardnumber, 'Card Number is required');
     } else if (!cardNumRegex.test(value)) {
-        setError(cardnumber, 'Invalid Card Number');
+        Invalid(cardnumber, 'Invalid Card Number');
     } else if (value.length !== 16) {
-        setError(cardnumber, 'Card Number must contain 16 digits');
+        Invalid(cardnumber, 'Card Number must contain 16 digits');
     } else {
-        setSuccess(cardnumber);
+        pass(cardnumber);
     }
 };
 
-const validateExpiryDate = () => {
+const validateexpirydate = () => {
     const value = expirydate.value.trim();
     // Expiry date validation rule: Check if the date is in the future and matches MM/YY format
     const expiryDateRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
@@ -78,13 +78,13 @@ const validateExpiryDate = () => {
     const currentMonth = currentDate.getMonth() + 1;
 
     if (value === '') {
-        setError(expirydate, 'Expiry Date is required');
+        Invalid(expirydate, 'Expiry Date is required');
     } else if (!expiryDateRegex.test(value)) {
-        setError(expirydate, 'Invalid Expiry Date (use MM/YY format)');
+        Invalid(expirydate, 'Invalid Expiry Date (use MM/YY format)');
     } else if (enteredYear < currentYear || (enteredYear === currentYear && enteredMonth < currentMonth)) {
-        setError(expirydate, 'Card has expired');
+        Invalid(expirydate, 'Card has expired');
     } else {
-        setSuccess(expirydate);
+        pass(expirydate);
     }
 };
 
@@ -94,31 +94,31 @@ const validateCVV = () => {
 
 
     if (value === '') {
-        setError(CVV, 'CVV is required');
+        Invalid(CVV, 'CVV is required');
     } else if (!cvvRegex.test(value)) {
-        setError(CVV, 'Invalid CVV');
+        Invalid(CVV, 'Invalid CVV');
     } else if (value.length !== 3) {
-        setError(CVV, 'Invalid CVV');
+        Invalid(CVV, 'Invalid CVV');
     } else {
-        setSuccess(CVV);
+        pass(CVV);
     }
 };
 
-const validateCardName = () => {
+const validatenameoncard = () => {
     const value = nameoncard.value.trim();
     // Card name validation rule: Only alphabetic characters and spaces
     const cardNameRegex = /^[A-Za-z ]+$/;
 
     if (value === '') {
-        setError(nameoncard, 'Card Name is required');
+        Invalid(nameoncard, 'Card Name is required');
     } else if (!cardNameRegex.test(value)) {
-        setError(nameoncard, 'Invalid Card Name (use only alphabetic characters and spaces)');
+        Invalid(nameoncard, 'Invalid Card Name (use only alphabetic characters and spaces)');
     } else {
-        setSuccess(nameoncard);
+        pass(nameoncard);
     }
 };
 
-const validateForm = () => {
+const validateform = () => {
     const allFieldsValid = (
         cardnumber.parentElement.classList.contains('success') &&
         expirydate.parentElement.classList.contains('success') &&

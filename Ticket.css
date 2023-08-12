@@ -18,7 +18,7 @@
     --light-second: #c3c2c8;
     --light-hover: #f0f0f0;
     --light-text: #151426;
-    --light-btn: #9796f0;
+    --light-btn: #333;
     --blue: #0000ff;
     --white: #fff;
     --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -55,7 +55,7 @@ ul li{
  
 ul li a{
      text-decoration: none;
-     color: white;
+     color: black;
      padding: 5px 20px;
      border: 1px solid transparent;
      transition: 0.6s ease; /*makes the transition effect according to the given time duration*/
@@ -63,13 +63,13 @@ ul li a{
 }
  
 ul li a:hover{
-     background-color: white;
-     color: black;
+     background-color: black;
+     color: white;
 }
  
 ul li.active a{
-     background-color: #fff;
-     color: black;
+     background-color: black;
+     color: white;
 }
 
 .logo1{
@@ -117,7 +117,7 @@ ul li.active a{
     top: 37%;
     left: 20px;
     padding-left: 23px;
-    background: #9796f0;
+    background: #333;
     width: 130px;
     border-radius: 10px;
     font-size: large;
@@ -153,7 +153,7 @@ ul li.active a{
 }
 
 .calendar-header{
-    background: #9796f0;
+    background: #333;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -332,7 +332,7 @@ ul li.active a{
     font-family: Microsoft JhengHei UI;
     font-size: 1.4rem;
     padding-right: 3%;
-    border-right: 3px solid #9796f0;
+    border-right: 3px solid #333;
     position: absolute;
     left: 110px;
 }
@@ -462,7 +462,7 @@ ul li.active a{
 
 .guest-heading{
     padding-left: 23px;
-    background: #9796f0;
+    background: #333;
     width: 150px;
     border-radius: 10px;
     font-size: large;
@@ -525,7 +525,7 @@ ul li.active a{
     top: 150%;
     left: 20px;
     padding-left: 23px;
-    background: #9796f0;
+    background: #333;
     width: 190px;
     border-radius: 10px;
     font-size: large;
@@ -742,25 +742,25 @@ hr{
 }
   
   
-.input-control {
+.sub-cont {
     display: flex;
     flex-direction: column;
 }
   
 /* validation  */
-.input-control input:focus {
+.sub-cont input:focus {
     outline: 0;
 }
   
-.input-control.success input {
+.sub-cont.success input {
     border-color: #09c372;
 }
   
-.input-control.invalid input {
+.sub-cont.invalid input {
     border-color: #ff3860;
 }
   
-.input-control .invalid {
+.sub-cont .invalid {
     color: #ff3860;
     font-size: .8em;
     height: 13px;
@@ -784,15 +784,15 @@ hr{
     color: #585858;
     font-family: Arial, Helvetica, sans-serif;
 }
-  .inpfields input, .inpfields select, .input-control input{
+  .inpfields input, .inpfields select, .sub-cont input{
     width: 24em;
     height: 3em;
 }
-  .input-control label
+  .sub-cont label
 {
     font-size: 16px;
 }
-    .input-control p
+    .sub-cont p
 {
     color: gray;
 }

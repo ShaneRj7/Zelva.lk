@@ -12,102 +12,109 @@ document.addEventListener("DOMContentLoaded" , ()=>{
 
 const purchasenow = document.getElementById("purchasenow");
 
-// Add input event listener to each input field separately
+
+
+// Adding event listener to the input field
+
 fullName.addEventListener("input", () => {
     validatefullName();
-    validateForm();
+    validateform();
 });
+
+const validatefullName = () => {
+    const Fname = fullName.value.trim();
+    const FnameR = /^[A-Za-z ]+$/;
+
+
+    if ( Fname === '') {
+        Invalid(fullName, 'Full Name is required');
+    } else if(!FnameR.test(Fname)) {
+        Invalid(fullName, 'Invalid (Use only alphabetic characters and spaces)');
+    } else {
+        pass(fullName);
+    }
+};
+
+
 
 email.addEventListener("input", () => {
     validateemail();
-    validateForm();
+    validateform();
 });
+
+const validateemail = () => {
+    const emailval = email.value.trim();
+
+    if (emailval=== '') {
+        Invalid(email, 'Email is required');
+    } else if (!legitemail(emailval)) {
+        Invalid(email, 'Provide a valid email address');
+    } else {
+        pass(email);
+    }
+};
 
 mobilenumber.addEventListener("input", () => {
     validateMobileNum();
-    validateForm();
+    validateform();
 });
+
+const validateMobileNum = () => {
+    const mobilenumberval = mobilenumber.value.trim();
+
+    if (mobilenumberval === '') {
+        Invalid(mobilenumber, 'Mobile number is required');
+    } else if (mobilenumberval.length !== 10) {
+        Invalid(mobilenumber, 'Enter a valid phone number');
+    } else {
+        pass(mobilenumber);
+    }
+};
 
 confirmemail.addEventListener("input", () => {
     validateConfirmEmail();
-    validateForm();
+    validateform();
 });
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.invalid');
 
-    errorDisplay.innerText = message;
-    inputControl.classList.add('invalid');
-    inputControl.classList.remove('success');
-}
+const validateConfirmEmail = () => {
+    const conemailval = confirmemail.value.trim();
+    const emailval = email.value.trim();
 
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.invalid');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('invalid');
+    if (conemailval === '') {
+        Invalid(confirmemail, 'Please confirm your email');
+    } else if (conemailval !== emailval) {
+        Invalid(confirmemail, 'Emails must match.')
+    } else {
+        pass(confirmemail);
+    }
 };
 
-const isValidemail = email => {
+const Invalid = (element, message) => {
+    const entry = element.parentElement;
+    const displayinvalid= entry.querySelector('.invalid');
+
+    displayinvalid.innerText = message;
+    entry.classList.add('invalid');
+    entry.classList.remove('success');
+}
+
+const pass = element => {
+    const entry = element.parentElement;
+    const displayinvalid = entry.querySelector('.invalid');
+
+    displayinvalid.innerText = '';
+    entry.classList.add('success');
+    entry.classList.remove('invalid');
+};
+
+const legitemail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
 
-const validatefullName = () => {
-    const FullNameValue = fullName.value.trim();
-    const FullNameRegex = /^[A-Za-z ]+$/;
 
-
-    if (FullNameValue === '') {
-        setError(fullName, 'Full Name is required');
-    } else if(!FullNameRegex.test(FullNameValue)) {
-        setError(fullName, 'Invalid (Use only alphabetic characters and spaces)');
-    } else {
-        setSuccess(fullName);
-    }
-};
-
-const validateemail = () => {
-    const EmailValue = email.value.trim();
-
-    if (EmailValue === '') {
-        setError(email, 'Email is required');
-    } else if (!isValidemail(EmailValue)) {
-        setError(email, 'Provide a valid email address');
-    } else {
-        setSuccess(email);
-    }
-};
-
-const validateConfirmEmail = () => {
-    const confirmemailValue = confirmemail.value.trim();
-    const EmailValue = email.value.trim();
-
-    if (confirmemailValue === '') {
-        setError(confirmemail, 'Please confirm your email');
-    } else if (confirmemailValue !== EmailValue) {
-        setError(confirmemail, 'Emails must match.')
-    } else {
-        setSuccess(confirmemail);
-    }
-};
-
-const validateMobileNum = () => {
-    const MobileNumValue = mobilenumber.value.trim();
-
-    if (MobileNumValue === '') {
-        setError(mobilenumber, 'Mobile number is required');
-    } else if (MobileNumValue.length !== 10) {
-        setError(mobilenumber, 'Enter a valid phone number');
-    } else {
-        setSuccess(mobilenumber);
-    }
-};
-
-const validateForm = () => {
+const validateform = () => {
     const allFieldsValid = (
         fullName.parentElement.classList.contains('success') &&
         email.parentElement.classList.contains('success') &&
