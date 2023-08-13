@@ -333,7 +333,7 @@ function checkAndUpdateRowContent(labelText, newValue) {
   else 
   {
     // Remove the row if ticketCount is zero
-    calculateCharge(labelText, newValue);
+    calculateCharge(labelText, newValue); 
   for (let i = 0; i < rows.length; i++) 
   {
   const row = rows[i];
